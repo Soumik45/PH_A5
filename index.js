@@ -118,3 +118,52 @@ document.getElementById('donate3').addEventListener('click',function(){
 
 
 //button magic
+
+function Toggle (id){
+    document.getElementById('history-card').classList.add('hidden')
+    document.getElementById('donate-card').classList.add('hidden')
+    document.getElementById(id).classList.remove('hidden')
+}
+function classy(id1,id2){
+
+    document.getElementById(id1).classList.remove('bg-white','font-semibold','border-2','border-gray-200');
+
+    document.getElementById(id1).classList.add('bg-tiya','font-bold');
+    document.getElementById(id2).classList.remove('bg-tiya','font-bold');
+
+    document.getElementById(id2).classList.add('bg-white','font-semibold','border-2','border-gray-200');
+   
+
+
+}
+
+
+document.getElementById('b1').addEventListener('click',function(){
+
+   
+    Toggle('donate-card');
+    classy('b1','h1');
+    
+    
+
+
+
+
+
+
+        
+
+
+
+    
+})
+
+document.getElementById('h1').addEventListener('click',function(){
+
+    Toggle('history-card');
+
+    classy('h1','b1');
+
+
+    
+})
